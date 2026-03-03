@@ -28,7 +28,7 @@ export default function HowItWorks() {
   return (
     <section className="section">
       <div className="section-label">How it works</div>
-      <div className="steps" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+      <div className="steps">
         {STEPS.map((step, i) => (
           <Reveal key={step.num} delay={i * 100}>
             <div className="step">
