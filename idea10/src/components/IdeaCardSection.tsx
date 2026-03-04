@@ -1,5 +1,5 @@
 import Reveal from './Reveal'
-import IdeaCardPhone from './IdeaCardPhone'
+import IdeaCardBrowser from './IdeaCardBrowser'
 
 export default function IdeaCardSection() {
   return (
@@ -18,7 +18,7 @@ export default function IdeaCardSection() {
       </Reveal>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <IdeaCardPhone />
+        <IdeaCardBrowser />
       </div>
     </section>
   )

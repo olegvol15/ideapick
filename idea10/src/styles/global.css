@@ -157,9 +157,9 @@ nav {
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.15fr;
   align-items: center;
-  gap: 60px;
+  gap: 48px;
   padding: 120px 48px 80px;
   position: relative;
   overflow: hidden;
@@ -178,6 +178,63 @@ nav {
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+.hero-browser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Browser Demo (Hero) ── */
+.browser-demo-wrap {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.browser-demo {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #0d0d14;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04), 0 8px 0 rgba(255,77,0,0.08);
+  transform: perspective(1200px) rotateY(-4deg) rotateX(1deg);
+  transition: transform 0.5s ease;
+}
+
+.browser-demo:hover {
+  transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+}
+
+.browser-demo-body {
+  height: 320px;
+  overflow: hidden;
+}
+
+/* ── Browser Card (IdeaCardSection) ── */
+.browser-card-wrap {
+  width: 100%;
+  max-width: 520px;
+}
+
+.browser-card {
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #0d0d14;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.browser-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 48px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,77,0,0.12);
 }
 
 .hero-bg-number {
@@ -1928,7 +1985,11 @@ footer {
 
   /* Hero */
   .hero { grid-template-columns: 1fr; padding: 100px 24px 64px; gap: 0; }
-  .hero-phone { display: flex; justify-content: center; margin-top: 48px; transform: scale(0.88); transform-origin: center top; }
+  .hero-phone { display: none; }
+  .hero-browser { margin-top: 40px; }
+  .browser-demo { transform: none; max-width: 100%; }
+  .browser-demo-body { height: 280px; }
+  .browser-card-wrap { max-width: 100%; }
   .hero-bg-number { display: none; }
   h1 { font-size: 52px; letter-spacing: -1px; }
   .hero-sub { font-size: 16px; }

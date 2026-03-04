@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import PhoneDemo from './PhoneDemo'
+import BrowserDemo from './BrowserDemo'
 
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID as string
 
@@ -110,8 +110,8 @@ export default function Hero() {
       </div>
 
       {/* Right column — animated phone */}
-      <div className="hero-phone">
-        <PhoneDemo />
+      <div className="hero-browser">
+        <BrowserDemo />
       </div>
     </section>
   )
